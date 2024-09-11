@@ -8,7 +8,7 @@ TIMESTAMP: str = datetime.now().strftime("%m_%d_%Y_%H_%M_%S")
 MODEL_CONFIG_FILE = "config/model.yaml"
 SCHEMA_FILE_PATH = "config/schema.yaml"
 
-DB_URL = environ["MONGO_DB_URL"]
+DB_URL = os.getenv("MONGO_DB_URL")
 
 TARGET_COLUMN = "Cost"
 DB_NAME = "shipmentdata"
